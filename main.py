@@ -6,7 +6,7 @@
 from pygame import mixer
 from datetime import datetime
 from time import time
-
+from time import sleep
 def musicloop(file, stop):
     """To Play Music/ Alarm/ Sound
 
@@ -54,6 +54,7 @@ if __name__ == "__main__":
             print("Enter 'water' to stop the alarm")
             musicloop('water.mp3', 'water')     #! water.mp3
             log("Drank Water At:")
+            sleep(1)
             init_water = time()
         
         if time() - init_eyes > eyes:
@@ -61,6 +62,7 @@ if __name__ == "__main__":
             print("Enter 'eyes' to stop the alarm")
             musicloop('eyes.mp3', 'eyes')       #! eyes.mp3
             log("Eyes Exercise Done At:")
+            sleep(1)
             init_eyes = time()
 
         if time() - init_exercise > exercise:
@@ -68,4 +70,5 @@ if __name__ == "__main__":
             print("Enter 'phy' to stop the alarm")
             musicloop('phy.mp3', 'phy')         #! phy.mp3
             log("Physical Exercise Done At:")
+            sleep(1)
             init_exercise = time()
