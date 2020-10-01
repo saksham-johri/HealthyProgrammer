@@ -29,14 +29,14 @@ def musicloop(file, stop):
     except Exception as e:
         print(e)
 
-def log(msg):
+def log(message):
     """To Maintain The Logs Of HealthyProgrammer In A File With TimeStamp
 
     Args:
-        msg (String): Message to stope in file in form of test/ log
+        message (String): Message to stope in file in form of test/ log
     """
     with open('my_logs.txt', 'a') as f:
-        f.write(f"{msg} [ {datetime.now()} ]\n")
+        f.write(f"{message} [ {datetime.now()} ]\n")
 
 if __name__ == "__main__":
     
